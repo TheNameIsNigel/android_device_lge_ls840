@@ -43,3 +43,8 @@ BOARD_CUSTOM_GRAPHICS := ../../../device/lge/ls840/recovery/graphics.c
 BOARD_HAS_NO_SELECT_BUTTON := true
 # Use this flag if the board has a ext4 partition larger than 2gb
 #BOARD_HAS_LARGE_FILESYSTEM := true
+
+# Cannibal Open Touch settings
+BOARD_CUSTOM_RECOVERY_UI := ../../device/lge/ls840/recovery/recovery_ui_ls840.c
+DEVICE_RESOLUTION := 480x800
+BOARD_TS_MAX_ROWS := 34
