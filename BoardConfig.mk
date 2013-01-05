@@ -41,7 +41,7 @@ BOARD_FLASH_BLOCK_SIZE 		   := 131072
 
 # kernel
 TARGET_PREBUILT_KERNEL := device/lge/ls840/kernel
-TARGET_KERNEL_CONFIG := plague_defconfig
+TARGET_KERNEL_CONFIG := cayman_sprint_us_defconfig
 
 # recovery
 TARGET_PREBUILT_RECOVERY_KERNEL := device/lge/ls840/recovery/recovery_kernel
@@ -67,9 +67,12 @@ BOARD_CACHE_FILESYSTEM_OPTIONS := nosuid,nodev,relatime,barrier=1,noauto_da_allo
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
 
-#twrp
-DEVICE_RESOLUTION 	     := 480x800
+#COT Stuff
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TW_FLASH_FROM_STORAGE 	     := true
 TW_NO_REBOOT_BOOTLOADER      := true
 
+# Cannibal Open Touch settings
+BOARD_CUSTOM_RECOVERY_UI := ../../device/lge/ls840/recovery/recovery_ui_ls840.c
+DEVICE_RESOLUTION := 480x800
+BOARD_TS_MAX_ROWS := 34
