@@ -73,6 +73,9 @@ TW_FLASH_FROM_STORAGE 	     := true
 TW_NO_REBOOT_BOOTLOADER      := true
 
 # Cannibal Open Touch settings
-BOARD_CUSTOM_RECOVERY_UI := ../../device/lge/ls840/recovery/recovery_ui_ls840.c
+
+# Removed the Custom Recovery UI until its more stable
+
+#BOARD_CUSTOM_RECOVERY_UI := ../../device/lge/ls840/recovery/recovery_ui_ls840.c
 DEVICE_RESOLUTION := 480x800
 BOARD_TS_MAX_ROWS := 34
