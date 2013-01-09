@@ -40,7 +40,9 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1887436800
 BOARD_FLASH_BLOCK_SIZE 		   := 131072
 
 # kernel
-TARGET_PREBUILT_KERNEL := device/lge/ls840/kernel
+
+# BUILD KERNEL FROM SOURCE NOW.
+#TARGET_PREBUILT_KERNEL := device/lge/ls840/kernel
 TARGET_KERNEL_CONFIG := cayman_sprint_us_defconfig
 
 # recovery
