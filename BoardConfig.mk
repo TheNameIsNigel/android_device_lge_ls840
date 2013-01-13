@@ -4,7 +4,7 @@ USE_CAMERA_STUB := true
 -include vendor/lge/ls840/BoardConfigVendor.mk
 
 # Bootloader
-TARGET_NO_BOOTLOADER := true
+TARGET_NO_BOOTLOADER := false
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8660
@@ -40,23 +40,15 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1887436800
 BOARD_FLASH_BLOCK_SIZE 		   := 131072
 
 # kernel
-
 # Fuck the kernel source.
 TARGET_PREBUILT_KERNEL := device/lge/ls840/kernel
 TARGET_KERNEL_CONFIG := cayman_sprint_us_defconfig
-
-# recovery
-TARGET_PREBUILT_RECOVERY_KERNEL := device/lge/ls840/recovery/recovery_kernel
-BOARD_CUSTOM_GRAPHICS := ../../../device/lge/ls840/recovery/graphics.c
-BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Use this flag if the board has a ext4 partition larger than 2gb
 #BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USES_MMCUTILS := true
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-
-
 BOARD_DATA_DEVICE := /dev/block/mmcblk0p29
 BOARD_DATA_FILESYSTEM := ext4
 BOARD_DATA_FILESYSTEM_OPTIONS := nosuid,nodev,relatime,barrier=1,noauto_da_alloc
@@ -65,7 +57,6 @@ BOARD_SYSTEM_FILESYSTEM := ext4
 BOARD_CACHE_DEVICE := /dev/block/mmcblk0p28
 BOARD_CACHE_FILESYSTEM := ext4
 BOARD_CACHE_FILESYSTEM_OPTIONS := nosuid,nodev,relatime,barrier=1,noauto_da_alloc
-
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
 
@@ -75,9 +66,9 @@ TW_FLASH_FROM_STORAGE 	     := true
 TW_NO_REBOOT_BOOTLOADER      := true
 
 # Cannibal Open Touch settings
-
-# Removed the Custom Recovery UI until its more stable
-
-#BOARD_CUSTOM_RECOVERY_UI := ../../device/lge/ls840/recovery/recovery_ui_ls840.c
+BOARD_CUSTOM_RECOVERY_UI := device/lge/ls840/recovery/recovery_ui_ls840.c
 DEVICE_RESOLUTION := 480x800
 BOARD_TS_MAX_ROWS := 34
+TARGET_PREBUILT_RECOVERY_KERNEL := device/lge/ls840/recovery/recovery_kernel
+BOARD_CUSTOM_GRAPHICS := device/lge/ls840/recovery/graphics.c
+BOARD_HAS_NO_SELECT_BUTTON := true
