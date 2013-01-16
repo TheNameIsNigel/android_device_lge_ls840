@@ -45,7 +45,7 @@ TARGET_PREBUILT_KERNEL := device/lge/ls840/kernel
 TARGET_KERNEL_CONFIG := cayman_sprint_us_defconfig
 
 # Use this flag if the board has a ext4 partition larger than 2gb
-#BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USES_MMCUTILS := true
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
